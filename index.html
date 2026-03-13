@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Penguin Hop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-container">
+    <!-- Timer -->
+    <div id="timer-display">2:00</div>
+
+    <!-- Game canvas area -->
+    <canvas id="game-canvas"></canvas>
+
+    <!-- Overlay screens -->
+    <div id="screen-start" class="screen active">
+      <div class="screen-box">
+        <h1>🐧 Penguin Hop</h1>
+        <p>Jump across the ice floes to reach the top!</p>
+        <p class="controls-hint">
+          <strong>Desktop:</strong> ← → to move &nbsp;|&nbsp; Space / ↑ to jump<br/>
+          <strong>Mobile:</strong> Tap left/right sides to move &nbsp;|&nbsp; Tap center to jump
+        </p>
+        <button id="btn-start">Start Game</button>
+      </div>
+    </div>
+
+    <div id="screen-win" class="screen">
+      <div class="screen-box">
+        <div id="win-family-art"></div>
+        <h1>🎉 You Made It!</h1>
+        <p>The penguin family is reunited!</p>
+        <button id="btn-win-restart">Play Again</button>
+      </div>
+    </div>
+
+    <div id="screen-timeout" class="screen">
+      <div class="screen-box">
+        <h1>⏰ Time's Up!</h1>
+        <p>The ice is melting! Try again.</p>
+        <button id="btn-timeout-restart">Try Again</button>
+      </div>
+    </div>
+
+    <!-- Mobile controls -->
+    <div id="mobile-controls">
+      <button id="btn-left" class="mobile-btn">◀</button>
+      <button id="btn-jump" class="mobile-btn">Jump</button>
+      <button id="btn-right" class="mobile-btn">▶</button>
+    </div>
+  </div>
+
+  <script src="js/constants.js"></script>
+  <script src="js/assets.js"></script>
+  <script src="js/floe.js"></script>
+  <script src="js/penguin.js"></script>
+  <script src="js/level.js"></script>
+  <script src="js/timer.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
